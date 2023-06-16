@@ -141,7 +141,7 @@ def compute_simpson(func, left, right, n):
     sum_of_y = func.calculate(dots[0]) + func.calculate(dots[n - 1])
 
     for i in range(1, n - 1):
-        sum_of_y += 4 * func.calculate(dots[i]) if i % 2 == 1 else 2 * func.calculate(dots[i])
+        sum_of_y += (4 * func.calculate(dots[i]) if i % 2 == 1 else 2 * func.calculate(dots[i]))
 
     return sum_of_y * h / 3
 
